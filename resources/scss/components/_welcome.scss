@@ -1,0 +1,18 @@
+/* --------------------------------
+ *          WELCOME
+-------------------------------- */
+.welcome {
+
+    .button {
+        margin-top: 10px;
+        padding: 8px 40px;
+        border-radius: 15px;
+        background: $gradient;
+        font-size: 20px;
+        border: none;
+        color: $text2;
+        @extend %shadow;
+        &:hover {opacity:  .85; @extend %shadow2;}
+    }
+
+}

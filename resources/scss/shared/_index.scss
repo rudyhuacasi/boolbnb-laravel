@@ -1,0 +1,35 @@
+/* --------------------------------
+*    HOME & MESSAGE & SERVICE
+*       AD & VISUAL & USER
+?            INDEX
+-------------------------------- */
+.home-index,
+.home-show {
+
+    .manage {
+
+        a {
+            padding: 13px 26px;
+            border-radius: 12px;
+            background: $gradient;
+            color: $text2;
+            @extend %shadow;
+
+            &:hover {
+                opacity: .9;
+                @extend %shadow2;
+            }
+
+        }
+    }
+
+
+    .img-container {
+        height: 200px;
+
+        &:hover {
+            transform: scale(1.02);
+            transition: .45s;
+        }
+    }
+}

@@ -1,0 +1,143 @@
+/* --------------------------------
+         ?   COMMON
+-------------------------------- */
+body {
+    height: 100vh;
+}
+
+main {
+    // overflow: auto;
+    width: 100vw;
+    min-height: calc(100% - 100px);
+
+    // background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('../img/bg-body.jpg');
+    // background-attachment: fixed;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+
+    // .overlay {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: rgba(255, 255, 255, 0.5);
+    // }
+}
+
+#welcome {
+    width: 100vw;
+    min-height: calc(100vh - 100px);
+    position: relative;
+    overflow: hidden;
+
+    animation: carousel 15s infinite ease-in-out;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @keyframes carousel {
+        0% {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../img/bg_01.jpg');
+        }
+        33% {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../img/bg_02.jpg');
+        }
+        66% {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../img/bg_03.jpg');
+        }
+        100% {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../img/bg_01.jpg');
+        }
+    }
+    // .overlay {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: rgba(0, 0, 0, 0.5);
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     text-align: center;
+    //     color: white;
+    // }
+}
+
+
+/* ***********************************
+        * MODALE DELETE
+*********************************** */
+
+//? per modale:
+.no-scroll {overflow: hidden;}
+
+.screen.active {display: block;}
+
+.screen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: $footer, $alpha: .7);
+    z-index: 100;
+}
+
+.holding {display: none;}
+
+.modale__modale{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $table;
+    width: 500px;
+    border-radius: 15px;
+    padding: 35px;
+    text-align: center;
+    z-index: 200;
+    @extend %shadow;
+
+    span.modale__exit {
+        font-family: 'Ubuntu Condensed', sans-serif;
+        position: absolute;
+        right: 35px;
+        top: 35px;
+        font-size: 24px;
+        font-weight: 900;
+        color: $delete;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.1);
+            transition: 3ms;
+        }
+    }
+    h4 {
+        font-size: 26px;
+        font-weight: 900;
+        color: $h_1;
+        margin-top: 60px;
+    }
+    form {text-align: center;}
+    input.delete {
+        display: inline-block;
+        margin-top: 25px;
+        border: none;
+        padding: 10px 40px;
+        border-radius: 15px;
+        background-color: $delete;
+        color: $text2;
+        @extend %shadow;
+        &:hover {
+            opacity: .9; 
+            font-weight: 400;
+            @extend %shadow2;
+        }
+
+    }
+
+}  

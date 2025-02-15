@@ -1,0 +1,177 @@
+/* --------------------------------
+*    HOME & MESSAGE & SERVICE
+*       AD & VISUAL & USER
+?            SHOW
+-------------------------------- */
+
+.home-show,
+.home-index {
+
+    .container {
+        .button-manage {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 35px;
+
+            .back {
+                
+                button,
+                a {
+                    border: none;
+                    padding: 8px 20px;
+                    border-radius: 12px;
+                    background: $gradient;
+                    color: $text2;
+                    @extend %shadow;      
+                    &:hover {opacity: .9; @extend %shadow2;}
+        
+                }
+            }
+            
+            .manage {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                .create {
+                    
+                    a {
+                        all: unset;
+                        margin-right: 10px;
+                        padding: 8px 20px;
+                        border-radius: 12px;
+                        border: 3px solid $create;
+                        font-weight: 400;
+                        color: $create;
+                        filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.3));
+                        &:hover {
+                            background-color: $create;
+                            color: $text2;
+                        }
+                    }
+                }
+                a {
+                    all: unset;
+                    
+                    .orange,
+                    .fa-pen {
+                        margin-right: 10px;
+                        padding: 10px;
+                        border-radius: 10px;
+                        color: $edit;
+                        border: 3px solid $edit;
+                        filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.3));
+                        &:hover {background-color: $edit; color: $text2}
+                    }
+                    .fa-trash {
+                        color: $delete;
+                        padding: 10px;
+                        border: 3px solid $delete;
+                        border-radius: 10px;
+                        filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.3));
+                        &:hover {background-color: $delete; color: $text2}
+                    }
+                }            
+            }
+        }
+
+        .card {
+            border-radius: 15px;
+            overflow: hidden;
+            @extend %shadow;
+            &:hover {
+                @extend %shadow2;
+            }
+            &:active {
+                opacity: .8;
+            }
+
+            .card-header {
+                
+                background: $gradient2;
+                color: $primary;
+                transition: 0.3s ease;
+            }
+            
+            input[type="radio"] {
+                display: none; /* Nascondi il radio button */
+            }
+            
+            input[type="radio"]:checked + label .card-header {
+                background: $gradient;
+                color: #fff; 
+            }
+
+            .crd {
+                padding: 35px 0 60px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                
+                
+                .image {
+                    width: 50%;
+                    max-height: 320px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    object-fit: cover;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .text {
+                    text-align: start;
+                    width: 50%;
+                    margin-left: 25px;
+                    li {
+                        span {
+                            color: $h_1;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+
+            p {
+                span {
+                    color: $h_1;
+                    font-weight: 600;
+                }
+
+                .fa-circle {
+                    color: $h_1;
+                    font-size: 6px;
+                    vertical-align: middle;
+                    margin: 0 15px;
+                }
+
+                a {
+                    border: none;
+                    background-color: unset;
+                    box-shadow: none;
+                    color: $h_3;
+                    font-size: 20px;
+                    font-weight: 500;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .no-hover:hover {
+            box-shadow: 1px 5px 10px rgba($shadow , $alpha);
+        }
+
+    }
+}
+#messaggio {
+    padding: 10px 15px;
+    background: rgba(155,225,93,1);
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    @extend %shadow;
+    width: fit-content;
+    margin-top: 15px;
+}

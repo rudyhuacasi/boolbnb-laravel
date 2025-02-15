@@ -1,0 +1,28 @@
+/* --------------------------------
+*    HOME & MESSAGE & SERVICE
+*       AD & VISUAL & USER
+?          HOME WELCOME
+-------------------------------- */
+
+
+
+#welcome {
+
+    h1 {
+        font-size: 60px;
+        span {
+            color: $text3;
+        }
+    }
+    p {
+        font-size: 28px;
+        font-weight: 400;
+    }
+     h3 {
+        
+        span {
+            font-weight: 900;
+            color: $text3
+        }
+     }
+}

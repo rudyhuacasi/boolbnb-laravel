@@ -1,0 +1,50 @@
+/* --------------------------------
+ *          DESHBOARD
+-------------------------------- */
+
+.dashboard {
+    padding-top: 35px;
+
+    .form {
+        background-color: $table;
+        border-radius: 15px;
+        overflow: hidden;
+        @extend %shadow;
+
+        .form-header {
+            background: $gradient;
+            color: $text2;
+            font-weight: 700;
+            padding: 25px 45px 15px;
+
+        }
+
+        .form-body {
+            padding: 25px 45px 25px;
+
+            .button {
+                padding: 8px 40px;
+                border-radius: 15px;
+                background: $btn;
+                border: none;
+                color: $text2;
+                @extend %shadow;
+
+                &:hover {
+                    opacity: .85;
+                }
+            }
+
+            a.link {
+                margin-left: 10px;
+                color: $text1;
+
+                &:hover {
+                    color: $h_1;
+                    font-weight: 500;
+                }
+            }
+
+        }
+    }
+}
